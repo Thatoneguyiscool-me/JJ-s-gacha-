@@ -7,31 +7,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🎰 JJ's Casino</h1>
+  <div class="container">
+    <h1 class="title">JJ's Casino 🎰</h1>
 
-  <div id="status">
-    <p id="money">💰 Money: $10000</p>
-    <p id="level">⭐ Level: 1</p>
-    <p id="xp">📈 XP: 0 / 1000</p>
+    <div class="money-xp">
+      <p>💰 Money: <span id="money">1000</span></p>
+      <p>⭐ Level: <span id="level">1</span></p>
+      <p>📈 XP: <span id="xp">0</span>/<span id="max-xp">1000</span></p>
+    </div>
+
+    <div class="slot-machine">
+      <div class="slot" id="slot1">❓</div>
+      <div class="slot" id="slot2">❓</div>
+      <div class="slot" id="slot3">❓</div>
+    </div>
+    <button id="roll-button">Roll 🎲 (Cost: 100)</button>
+
+    <div class="character-section">
+      <h2>Anime Characters</h2>
+      <div id="character-list">
+        <!-- Characters will be added here -->
+      </div>
+    </div>
+
+    <div class="minigames">
+      <h2>Minigames 🎮</h2>
+      <button id="play-dice">Roll Dice 🎲</button>
+      <p id="dice-result"></p>
+    </div>
   </div>
 
-  <div id="gacha-machine">
-    <div class="slot">0</div>
-    <div class="slot">0</div>
-    <div class="slot">0</div>
-  </div>
-
-  <button onclick="spinSlots()">Roll Gacha</button>
-  <p id="result"></p>
-
-  <h2>🎲 Dice Mini-Game</h2>
-  <button onclick="rollDice()">Roll Dice</button>
-  <p id="dice-result"></p>
-
-  <h2>🧑‍🎤 Character Store</h2>
-  <div id="character-store"></div>
-
-  <audio id="bg-music" src="bg-music.mp3" loop></audio>
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src=".mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+  <button onclick="toggleMusic()" id="music-toggle">🔊 Music: On</button>
 
   <script src="script.js"></script>
 </body>
