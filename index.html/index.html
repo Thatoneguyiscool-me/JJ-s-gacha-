@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>JJ's Casino</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>🎰 JJ's Casino 🎰</h1>
+  <h1>🎰 JJ's Casino</h1>
 
-  <div id="money"></div>
-  <div id="level"></div>
-  <div id="xp"></div>
+  <div id="status">
+    <p id="money">💰 Money: $10000</p>
+    <p id="level">⭐ Level: 1</p>
+    <p id="xp">📈 XP: 0 / 1000</p>
+  </div>
 
-  <div class="slot-machine">
+  <div id="gacha-machine">
     <div class="slot">0</div>
     <div class="slot">0</div>
     <div class="slot">0</div>
@@ -23,11 +24,15 @@
   <button onclick="spinSlots()">Roll Gacha</button>
   <p id="result"></p>
 
-  <h2>🎲 Dice Game 🎲</h2>
+  <h2>🎲 Dice Mini-Game</h2>
   <button onclick="rollDice()">Roll Dice</button>
   <p id="dice-result"></p>
 
-  <h2>🧍‍♂️ Anime Character Store</h2>
+  <h2>🧑‍🎤 Character Store</h2>
   <div id="character-store"></div>
+
+  <audio id="bg-music" src="bg-music.mp3" loop></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
